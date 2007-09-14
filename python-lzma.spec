@@ -36,5 +36,5 @@ python setup.py install --root=%{buildroot} --record=INSTALLED_FILES
 %defattr(-,root,root)
 %doc readme.txt doc/*
 %{python_sitearch}/*.py*
-%{python_sitearch}/%{name}*.egg-info
-%{python_sitearch}/%{name}.so
+%{python_sitearch}/%{oname}*.egg-info
+%{python_sitearch}/%{oname}.so
