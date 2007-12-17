@@ -13,7 +13,6 @@ BuildRequires:	python-devel
 %py_requires -d
 Provides:	%{oname}
 Obsoletes:	%{oname}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Python bindings for the LZMA compression library.
