@@ -4,12 +4,11 @@
 Summary:	Python bindings for the LZMA compression library
 Name:		python-%{module}
 Version:	0.3.0
-Release:	%mkrel 2
-License:	GPL
+Release:	%mkrel 3
+License:	LGPLv2+
 Group:		Development/Python
 Url:		http://www.joachim-bauch.de/projects/python/pylzma
 Source0:	http://www.joachim-bauch.de/projects/python/pylzma/releases/%{oname}-%{version}.tar.bz2
-BuildRequires:	python-devel
 %py_requires -d
 Provides:	%{oname}
 Obsoletes:	%{oname}
