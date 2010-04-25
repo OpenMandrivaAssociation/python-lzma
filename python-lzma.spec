@@ -3,12 +3,12 @@
 
 Summary:	Python bindings for the LZMA compression library
 Name:		python-%{module}
-Version:	0.3.0
-Release:	%mkrel 8
+Version:	0.5.2
+Release:	%mkrel 1
 License:	LGPLv2+
 Group:		Development/Python
 Url:		http://www.joachim-bauch.de/projects/python/pylzma
-Source0:	http://www.joachim-bauch.de/projects/python/pylzma/releases/%{oname}-%{version}.tar.bz2
+Source0:	http://www.joachim-bauch.de/projects/python/pylzma/releases/%{oname}-%{version}.tar.gz
 %py_requires -d
 Provides:	%{oname}
 Obsoletes:	%{oname}
@@ -18,22 +18,22 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 Python bindings for the LZMA compression library.
 
 %prep
-%setup -qn %{oname}-%{version}
+%setup -qn pyliblzma-%{version}
 
 %build
 env CFLAGS="%{optflags}" python setup.py build
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 python setup.py install --root=%{buildroot} --record=INSTALLED_FILES
 
 %clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc readme.txt doc/*
+%doc README NEWS COPYING ChangeLog
 %{python_sitearch}/*.py*
-%{python_sitearch}/%{oname}*.egg-info
-%{python_sitearch}/%{oname}.so
+%{python_sitearch}/pyliblzma*.egg-info
+%{python_sitearch}/lzma.so
