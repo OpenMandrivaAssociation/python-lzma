@@ -10,6 +10,7 @@ Group:		Development/Python
 Url:		http://www.joachim-bauch.de/projects/python/pylzma
 Source0:	http://www.joachim-bauch.de/projects/python/pylzma/releases/%{oname}-%{version}.tar.gz
 %py_requires -d
+BuildRequires:  python-setuptools
 Provides:	%{oname}
 Obsoletes:	%{oname}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
