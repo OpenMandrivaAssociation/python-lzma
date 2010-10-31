@@ -9,7 +9,8 @@ License:	LGPLv2+
 Group:		Development/Python
 Url:		http://www.joachim-bauch.de/projects/python/pylzma
 Source0:	http://www.joachim-bauch.de/projects/python/pylzma/releases/%{oname}-%{version}.tar.gz
-%py_requires -d
+BuildRequires:	lzma-devel
+BuildRequires:	python-devel
 BuildRequires:  python-setuptools
 Provides:	%{oname}
 Obsoletes:	%{oname}
