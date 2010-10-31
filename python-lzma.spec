@@ -4,7 +4,7 @@
 Summary:	Python bindings for the LZMA compression library
 Name:		python-%{module}
 Version:	0.5.2
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	LGPLv2+
 Group:		Development/Python
 Url:		http://www.joachim-bauch.de/projects/python/pylzma
