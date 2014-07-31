@@ -9,9 +9,9 @@ License:	LGPLv2+
 Group:		Development/Python
 Url:		http://www.joachim-bauch.de/projects/python/pylzma
 Source0:	http://www.joachim-bauch.de/projects/python/pylzma/releases/%{oname}-%{version}.tar.bz2
-BuildRequires:	python-setuptools
+BuildRequires:	python2-setuptools
 BuildRequires:	pkgconfig(liblzma)
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python2)
 %rename	%{oname}
 %rename	python-liblzma
 
@@ -22,14 +22,14 @@ Python bindings for the LZMA compression library.
 %setup -qn pyliblzma-%{version}
 
 %build
-env CFLAGS="%{optflags}" python setup.py build
+env CFLAGS="%{optflags}" python2 setup.py build
 
 %install
-python setup.py install --root=%{buildroot} --record=INSTALLED_FILES
+python2 setup.py install --root=%{buildroot} --record=INSTALLED_FILES
 
 %files
 %doc README NEWS COPYING ChangeLog
-%{python_sitearch}/*.py*
-%{python_sitearch}/pyliblzma*.egg-info
-%{python_sitearch}/lzma.so
+%{python2_sitearch}/*.py*
+%{python2_sitearch}/pyliblzma*.egg-info
+%{python2_sitearch}/lzma.so
 
