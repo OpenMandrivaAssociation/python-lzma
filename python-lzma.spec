@@ -26,6 +26,7 @@ env CFLAGS="%{optflags}" python2 setup.py build
 
 %install
 python2 setup.py install --root=%{buildroot} --record=INSTALLED_FILES
+chmod +x %{buildroot}%{python2_sitearch}/liblzma.py
 
 %files
 %doc README NEWS COPYING ChangeLog
