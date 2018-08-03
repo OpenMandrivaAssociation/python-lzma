@@ -12,6 +12,8 @@ Source0:	http://www.joachim-bauch.de/projects/python/pylzma/releases/%{oname}-%{
 BuildRequires:	python2-distribute
 BuildRequires:	pkgconfig(liblzma)
 BuildRequires:	pkgconfig(python2)
+BuildRequires:  python-pkg-resources
+BuildRequires:  python2-pkg-resources
 
 %description
 Python bindings for the LZMA compression library.
