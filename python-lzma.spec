@@ -7,7 +7,7 @@ Version:	0.5.3
 Release:	12
 License:	LGPLv2+
 Group:		Development/Python
-Url:		http://www.joachim-bauch.de/projects/python/pylzma
+Url:		https://www.joachim-bauch.de/projects/python/pylzma
 Source0:	http://www.joachim-bauch.de/projects/python/pylzma/releases/%{oname}-%{version}.tar.bz2
 BuildRequires:	python2-distribute
 BuildRequires:	pkgconfig(liblzma)
